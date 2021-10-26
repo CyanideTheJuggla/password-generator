@@ -4,6 +4,9 @@ bootcamp password generator project
 
 Deployed at: https://cyanidethejuggla.github.io/password-generator/Develop/
 
+screenshot:
+<img src="img.png">
+
 # User Story
 
 ```
