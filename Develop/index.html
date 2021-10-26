@@ -17,18 +17,37 @@
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+          <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
+    
+    <div class="popupContainer" style="display: none; opacity: 0">
+      <div class="popup">
+        <div class="popupHeader">Password Options</div>
+        <p>Character types</p>
+        <ul style="list-style: none;">
+          <li><input type="checkbox" name="characterOpt" id="Lowercase">Lowercase</li>
+          <li><input type="checkbox" name="characterOpt" id="Uppercase">Uppercase</li>
+          <li><input type="checkbox" name="characterOpt" id="Numeric">Numeric</li>
+          <li><input type="checkbox" name="characterOpt" id="Special">Special</li>
+        </ul>
+        <div>
+          <p>
+            Password Length
+            <input type="number" id="passwordLength" placeholder="Max" min="1" style="width: 50px">
+          </p>
+        </div>
+        <div class="popupAction">
+          <button id="submitOptions" >Generate Password</button>
+        </div>
+        <p class="notice" style="display: none; opacity: 0"></p>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
