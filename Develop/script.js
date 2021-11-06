@@ -54,6 +54,7 @@ let FadeToggle = (targetElement) => {
 
 const validated = ((options) => {
   let valid = 0;
+  if(!(document.getElementById('passwordLength').value >= 8 && document.getElementById('passwordLength').value <= 128)) return false;
   for (let i = 0; i < options.length; i++) {
     //console.log('options[i]', options[i]);
     //console.log('valid', valid);
@@ -66,10 +67,14 @@ const validated = ((options) => {
 
 const noticeRequire = () => {
   document.getElementsByClassName('notice')[0].innerHTML = 'You must choose at least one option.';
+  if(!(document.getElementById('passwordLength').value >= 8 && document.getElementById('passwordLength').value <= 128)){
+    document.getElementsByClassName('notice')[0].innerHTML += '<br /> Minimum password length: 8 characters <br /> Maximum password length: 128 characters';
+  }
   FadeToggle('notice');
   setTimeout(() => {
     FadeToggle('notice');
-  }, 5000);
+  }, 2500);
+  
 }
 
 const generatePassword = (() =>{
